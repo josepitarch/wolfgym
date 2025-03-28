@@ -285,14 +285,9 @@ export default function GymLanding() {
           </p>
           <div className="flex gap-4">
             <Link
-              href="#"
+              href="/policies/privacy-policy"
               className="text-sm font-medium hover:underline underline-offset-4">
-              Privacy Policy
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium hover:underline underline-offset-4">
-              Terms of Service
+              Política de privacidad
             </Link>
           </div>
         </div>
