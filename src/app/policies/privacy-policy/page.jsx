@@ -1,8 +1,8 @@
 import Link from "next/link"
 
 export const metadata = {
-  title: "Privacy Policy | FitLife Gym",
-  description: "Learn about how we collect, use, and protect your personal information at FitLife Gym.",
+  title: "Política de privacidad | Wolf Gym",
+  description: "Aprenda cómo recopilamos, utilizamos y protegemos su información personal en Wolf Gym.",
 }
 
 export default function PrivacyPage() {
@@ -15,62 +15,35 @@ export default function PrivacyPage() {
 
       <div className="space-y-8">
         <section>
-          <h2 className="text-2xl font-semibold mb-3">Introduction</h2>
           <p className="mb-3">
-            At FitLife Gym, we respect your privacy and are committed to protecting your personal data. This privacy
-            policy will inform you about how we look after your personal data when you visit our website and tell you
-            about your privacy rights and how the law protects you.
+          Esta Política de privacidad describe cómo Wolf Gym (en adelante, el "Sitio", "nosotros" o "nuestro") recopila, utiliza y divulga
+          su información personal al visitar o utilizar nuestros servicios, al realizar una compra en umagym.com (en adelante, el "Sitio" ) o 
+          al comunicarse con nosotros de cualquier otra manera con respecto al Sitio (denominado de manera colectiva como, los "Servicios"). A los efectos de la presente Política de privacidad, 
+          los términos "usted" y "su" hacen referencia a usted como usuario de los Servicios, ya sea en calidad de cliente, 
+          visitante del sitio web o como cualquier otro individuo cuya información hayamos recopilado de conformidad con la presente Política de privacidad.
+          
+          Lea atentamente la presente Política de privacidad.
           </p>
-          <p>Please read this privacy policy carefully before using our services.</p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-3">Information We Collect</h2>
+          <h2 className="text-2xl font-semibold mb-3">Cambios en la presente Política de privacidad</h2>
           <p className="mb-3">
-            We may collect, use, store and transfer different kinds of personal data about you which we have grouped
-            together as follows:
+            Esta Política de privacidad se podrá actualizar puntualmente para reflejar cambios en nuestras prácticas o por cualesquiera otras razones operativas, 
+            legales o normativas. Publicaremos la Política de privacidad revisada en el Sitio, actualizaremos la fecha de "Última actualización" y tomaremos cualquier 
+            otra medida que pueda exigir la ley aplicable.
           </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Identity Data</strong> includes first name, last name, username or similar identifier.
-            </li>
-            <li>
-              <strong>Contact Data</strong> includes email address, telephone number, and address.
-            </li>
-            <li>
-              <strong>Technical Data</strong> includes internet protocol (IP) address, browser type and version, time
-              zone setting and location, browser plug-in types and versions, operating system and platform, and other
-              technology on the devices you use to access this website.
-            </li>
-            <li>
-              <strong>Usage Data</strong> includes information about how you use our website and services.
-            </li>
-            <li>
-              <strong>Marketing and Communications Data</strong> includes your preferences in receiving marketing from
-              us and our third parties and your communication preferences.
-            </li>
-          </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-3">How We Use Your Information</h2>
+          <h2 className="text-2xl font-semibold mb-3">Recopilación y utilización de su información personal</h2>
           <p className="mb-3">
-            We will only use your personal data when the law allows us to. Most commonly, we will use your personal data
-            in the following circumstances:
+            Para prestar los Servicios, recopilamos información personal sobre usted de una variedad de fuentes, 
+            como se indica a continuación. La información que recopilamos y utilizamos varía en función de cómo interactúa con nosotros.
+            Además de los usos específicos que se establecen a continuación, podremos usar la información que recopilamos para comunicarnos con usted, 
+            proporcionarle o mejorar los Servicios, cumplir con cualquier obligación legal aplicable, hacer cumplir los términos de servicio aplicables 
+            y proteger o defender los Servicios, nuestros derechos, los de nuestros usuarios y los de otros.
           </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>To register you as a new member.</li>
-            <li>To process and deliver your membership services.</li>
-            <li>
-              To manage our relationship with you including notifying you about changes to our terms or privacy policy.
-            </li>
-            <li>To administer and protect our business and this website.</li>
-            <li>To deliver relevant website content and advertisements to you.</li>
-            <li>
-              To use data analytics to improve our website, products/services, marketing, customer relationships and
-              experiences.
-            </li>
-          </ul>
         </section>
 
         <section>
