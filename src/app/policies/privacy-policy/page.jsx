@@ -283,7 +283,7 @@ export default function PrivacyPage() {
 
       <div className="mt-12 border-t pt-6">
         <Link href="/" className="text-primary hover:underline">
-          ← Back to Home
+          ← Volver a la página de inicio
         </Link>
       </div>
     </div>
