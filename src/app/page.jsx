@@ -59,14 +59,6 @@ export default function GymLanding() {
                     Bienvenido a una nueva Era.
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button size="lg" className="gap-1">
-                    Get Started <ArrowRight className="h-4 w-4" />
-                  </Button>
-                  <Button size="lg" variant="outline">
-                    View Membership Plans
-                  </Button>
-                </div>
               </div>
               <Image
                 src="/wolfgym.webp"
@@ -217,7 +209,7 @@ export default function GymLanding() {
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Encuentranos</h2>
                 <p
                   className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Conveniently located in the heart of the city. Stop by for a tour or start your fitness journey today.
+                  Cerca de tí
                 </p>
               </div>
             </div>
