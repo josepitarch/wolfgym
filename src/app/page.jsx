@@ -26,29 +26,19 @@ export default function GymLanding() {
               className="text-sm font-medium transition-colors hover:text-primary">
               Memberships
             </Link>
-            <Link
-              href="#trainers"
-              className="text-sm font-medium transition-colors hover:text-primary">
-              Trainers
-            </Link>
-            <Link
-              href="#testimonials"
-              className="text-sm font-medium transition-colors hover:text-primary">
-              Testimonials
-            </Link>
+        
             <Link
               href="#location"
               className="text-sm font-medium transition-colors hover:text-primary">
-              Location
+              Localización
             </Link>
           </nav>
           <div className="flex items-center gap-4">
             <Link
               href="#location"
               className="hidden md:block text-sm font-medium transition-colors hover:text-primary">
-              Location
+              Localización
             </Link>
-            <Button>Join Now</Button>
           </div>
         </div>
       </header>
@@ -172,9 +162,9 @@ export default function GymLanding() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Membership Plans</h2>
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Nuestros precios</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Choose the plan that fits your lifestyle and fitness goals.
+                  Elige el plan que mejor se adapte
                 </p>
               </div>
             </div>
@@ -182,7 +172,6 @@ export default function GymLanding() {
               <Card className="flex flex-col">
                 <CardHeader>
                   <CardTitle>Mensual</CardTitle>
-                  <CardDescription>Perfect for beginners</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col items-center justify-center">
                   <div className="text-5xl font-bold mb-2">39,90€</div>
@@ -211,7 +200,7 @@ export default function GymLanding() {
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col items-center justify-center">
                   <div className="text-5xl font-bold mb-2">349€</div>
-                  <div className="text-sm text-muted-foreground">anual</div>
+                  <div className="text-sm text-muted-foreground">cada año</div>
                 </CardContent>
                
               </Card>
@@ -251,11 +240,7 @@ export default function GymLanding() {
                     <span>info@wolfgyms.es</span>
                   </div>
                 </div>
-                <div className="pt-4">
-                  <Button size="lg" className="gap-1">
-                    Get Directions <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </div>
+              
               </div>
               <div className="aspect-video overflow-hidden rounded-xl border bg-muted">
                 <div className="w-full h-full bg-muted flex items-center justify-center">
@@ -281,7 +266,7 @@ export default function GymLanding() {
             <span className="text-lg font-bold">WolfGym</span>
           </div>
           <p className="text-center text-sm text-muted-foreground md:text-left">
-            &copy; {new Date().getFullYear()} WolfGym. All rights reserved.
+            &copy; {new Date().getFullYear()} WolfGym. Todos los derechos reservados.
           </p>
           <div className="flex gap-4">
             <Link
