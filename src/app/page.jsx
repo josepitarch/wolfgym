@@ -160,38 +160,44 @@ export default function GymLanding() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-3">
+            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-4">
               <Card className="flex flex-col">
                 <CardHeader>
                   <CardTitle>Mensual</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col items-center justify-center">
-                  <div className="text-5xl font-bold mb-2">39,90€</div>
+                  <div className="text-5xl font-bold mb-2">40€</div>
                   <div className="text-sm text-muted-foreground">cada mes</div>
-                </CardContent>
-               
+                </CardContent> 
               </Card>
+
               <Card className="flex flex-col border-primary">
-                <CardHeader className="bg-primary text-primary-foreground">
-                  <div className="text-sm font-medium uppercase">Trimestral</div>
-                  <CardTitle className="text-primary-foreground">Alpha</CardTitle>
-                  <CardDescription className="text-primary-foreground/90">
-                    For dedicated fitness enthusiasts
-                  </CardDescription>
+                <CardHeader>
+                  <div>Trimestral</div>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col items-center justify-center">
                   <div className="text-5xl font-bold mb-2">109€</div>
                   <div className="text-sm text-muted-foreground">cada tres meses</div>
                 </CardContent>
-              
               </Card>
+
+              <Card className="flex flex-col border-primary">
+                <CardHeader>
+                  <div>Semestral</div>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col items-center justify-center">
+                  <div className="text-5xl font-bold mb-2">189€</div>
+                  <div className="text-sm text-muted-foreground">cada seis meses</div>
+                </CardContent>
+              </Card>
+
               <Card className="flex flex-col">
                 <CardHeader>
                   <CardTitle>Anual</CardTitle>
               
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col items-center justify-center">
-                  <div className="text-5xl font-bold mb-2">349€</div>
+                  <div className="text-5xl font-bold mb-2">379€</div>
                   <div className="text-sm text-muted-foreground">cada año</div>
                 </CardContent>
                
