@@ -328,6 +328,74 @@
             font-size: 0.875rem;
         }
 
+        /* App Movil Section */
+        .app-movil {
+            background: radial-gradient(ellipse at 30% 50%, #1a1a1a 0%, #000000 70%);
+            padding: 6rem 2rem;
+        }
+
+        .app-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        .app-phones {
+            grid-column: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .app-phones-placeholder {
+            width: 280px;
+            height: 380px;
+            border: 2px dashed #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 0.875rem;
+        }
+
+        .app-text {
+            grid-column: 2;
+            text-align: left;
+        }
+
+        .app-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin: 2rem 0;
+            max-width: 500px;
+        }
+
+        .app-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .store-button {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .store-button:hover {
+            transform: translateY(-5px);
+        }
+
+        .store-button img {
+            height: 60px;
+            width: auto;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero-title {
@@ -349,6 +417,19 @@
 
             .location-content {
                 grid-template-columns: 1fr;
+            }
+
+            .app-content {
+                grid-template-columns: 1fr;
+            }
+
+            .app-text {
+                grid-column: 1;
+                text-align: center;
+            }
+
+            .app-buttons {
+                justify-content: center;
             }
 
             .price {
@@ -435,6 +516,31 @@
         <p class="schedule-note">Abierto los 365 días del año. El horario puede variar en festivos.</p>
     </section>
 
+    <!-- App Movil Section -->
+    <section class="app-movil">
+        <div class="app-content">
+            <div class="app-phones">
+                <div class="app-phones-placeholder">[Mockup teléfonos]</div>
+            </div>
+            <div class="app-text">
+                <p class="section-label">Aplicación Móvil</p>
+                <h2 class="section-title">WOLFGYM EN TU BOLSILLO</h2>
+                <p class="app-description">
+                    Una aplicación específica para completar tus entrenamientos. 
+                    Descarga ahora la aplicación WolfGym.
+                </p>
+                <div class="app-buttons">
+                    <a href="#" class="store-button">
+                        <img src="public/google-play.svg" alt="Google Play">
+                    </a>
+                    <a href="#" class="store-button">
+                        <img src="public/apple-store.svg" alt="App Store">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Ubicacion Section -->
     <section class="ubicacion">
         <div class="section-header">
@@ -444,20 +550,15 @@
         <div class="location-content">
             <div class="location-info">
                 <h3>Visítanos</h3>
-                <p class="address">Calle Principal, 123<br>Tu Ciudad, CP 12345</p>
-                <a href="https://maps.google.com" target="_blank" class="map-link">
+                <p class="address">Wolf Gym<br>Vila-real, Castellón</p>
+                <a href="https://www.google.com/maps/place/Wolf+gym/@39.9431422,-0.1309738,15z/data=!4m5!3m4!1s0x0:0x58fdd7ce7a9e5669!8m2!3d39.9431422!4d-0.1309738" target="_blank" class="map-link">
                     Ver en Google Maps →
                 </a>
             </div>
-            <div class="location-map">
-                [Mapa de Google Maps]
+            <div class="location-map" style="padding: 0; overflow: hidden;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24471.373191658862!2d-0.13097384985018518!3d39.94314221173552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60075780f697c7%3A0x58fdd7ce7a9e5669!2sWolf%20gym!5e0!3m2!1ses!2ses!4v1792254819859!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 WolfGym. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>
