@@ -3,10 +3,78 @@ import "@/styles/globals.css";
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
+  keywords?: string;
+  canonicalPath?: string;
+  ogImage?: string;
+  noindex?: boolean;
 }
 
-const { title, description = "" } = Astro.props;
+const {
+  title,
+  description,
+  keywords = "gimnasio vilarreal, gimnasio castellon, gym vila-real, gimnasio zona castellon, fitness vilarreal, gimnasio barrio, wolf gym, gimnasio 12540",
+  canonicalPath = "/",
+  ogImage = "/wolfgym.webp",
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = "https://wolfgyms.es";
+const canonicalUrl = `${siteUrl}${canonicalPath}`;
+const fullOgImage = `${siteUrl}${ogImage}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  name: "WolfGym",
+  alternateName: "Wolf Gym",
+  description: description,
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  image: fullOgImage,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Av. Francesc Tàrrega, 34",
+    addressLocality: "Vila-real",
+    addressRegion: "Castelló",
+    postalCode: "12540",
+    addressCountry: "ES",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 39.9431422,
+    longitude: -0.1309738,
+  },
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Vila-real",
+    },
+    {
+      "@type": "City",
+      name: "Villarreal",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Castellón",
+    },
+  ],
+  priceRange: "€€",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      opens: "05:45",
+      closes: "23:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday","Sunday"],
+      opens: "08:00",
+      closes: "21:00",
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -14,15 +82,43 @@ const { title, description = "" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Básico -->
+    <title>{title}</title>
     <meta name="description" content={description} />
+    {keywords && <meta name="keywords" content={keywords} />}
+    <meta name="author" content="WolfGym" />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="WolfGym" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullOgImage} />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <title>{title}</title>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body class="font-sans antialiased">
     <slot />
